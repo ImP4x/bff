@@ -1,0 +1,613 @@
+@import url('https://fonts.googleapis.com/css?family=Sofia');
+
+html, body { height: 100%; }
+
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.bk-title {
+  display: flex;
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+	width: 750px;
+	height: 900px;
+}
+#space {
+  position: absolute;
+	top: 0;
+	left: 0;
+  background: #000000;
+}
+.bk-title img {
+	width: 750px;
+	height: 900px;
+}
+body {
+    background: #333;
+    color: #fff;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+a {
+  color: #555;
+  text-decoration: none;
+}
+
+
+.portfolio.wrapper-table {
+  display: table;
+  width: 750px;
+  height: 500px;
+  margin: 0 auto;
+}
+.wrapper-vertical{
+  display: table-cell;
+  vertical-align: middle;
+}
+.wrapper-horizontal{
+  min-height: 450px;
+  width: 50%;
+  max-width: 500px;
+  margin: auto;
+  position: relative;
+}
+.wrapper-square {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+}
+.wrapper-square-dummy {
+  margin-top: 100%;
+}
+.wrapper-square-element {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.hidden {
+  display:none;
+}
+.bk-book {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transition: -webkit-transform .5s, margin .5s;
+	-moz-transition: -moz-transform .5s, margin .5s;
+	transition: transform .5s, margin .5s;
+}
+
+.bk-book > div,
+.bk-front > div {
+	display: block;
+	position: absolute;
+}
+
+.bk-front {
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transform-origin: 0% 50%;
+	-moz-transform-origin: 0% 50%;
+	transform-origin: 0% 50%;
+	-webkit-transition: -webkit-transform .5s;
+	-moz-transition: -moz-transform .5s;
+	transition: transform .5s;
+	-webkit-transform: translate3d(0,0,20px);
+	-moz-transform: translate3d(0,0,20px);
+	transform: translate3d(0,0,20px);
+	z-index: 10;
+}
+
+.bk-front > div {
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+.bk-page {
+	-webkit-transform: translate3d(0,0,19px);
+	-moz-transform: translate3d(0,0,19px);
+	transform: translate3d(0,0,19px);
+	display: none;
+	width: 750px;
+	height: 900px;
+  overflow: hidden;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+	z-index: 9;
+}
+.bk-page > div{
+  margin-left: -100%;
+}
+
+.bk-front,
+.bk-back,
+.bk-front > div {
+	width: 750px;
+	height: 900px;
+}
+
+.bk-left,
+.bk-right {
+	width: 40px;
+	left: -20px;
+}
+
+.bk-top,
+.bk-bottom {
+	width: 495px;
+	height: 40px;
+	top: -15px;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.bk-back {
+	-webkit-transform: rotate3d(0,1,0,-180deg) translate3d(0,0,20px);
+	-moz-transform: rotate3d(0,1,0,-180deg) translate3d(0,0,20px);
+	transform: rotate3d(0,1,0,-180deg) translate3d(0,0,20px);
+}
+
+.bk-cover-back {
+	background-color: #000;
+	-webkit-transform: rotate3d(0,1,0,-180deg);
+	-moz-transform: rotate3d(0,1,0,-180deg);
+	transform: rotate3d(0,1,0,-180deg);
+  overflow: hidden;
+}
+
+.bk-right {
+	height: 390px;
+	top: 5px;
+	-webkit-transform: rotate3d(0,1,0,90deg) translate3d(0,0,295px);
+	-moz-transform: rotate3d(0,1,0,90deg) translate3d(0,0,295px);
+	transform: rotate3d(0,1,0,90deg) translate3d(0,0,295px);
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.bk-left {
+	height: 100%;
+	-webkit-transform: rotate3d(0,1,0,-90deg);
+	-moz-transform: rotate3d(0,1,0,-90deg);
+	transform: rotate3d(0,1,0,-90deg);
+}
+
+.bk-top {
+	-webkit-transform: rotate3d(1,0,0,90deg);
+	-moz-transform: rotate3d(1,0,0,90deg);
+	transform: rotate3d(1,0,0,90deg);
+}
+
+.bk-bottom {
+	-webkit-transform: rotate3d(1,0,0,-90deg) translate3d(0,0,390px);
+	-moz-transform: rotate3d(1,0,0,-90deg) translate3d(0,0,390px);
+	transform: rotate3d(1,0,0,-90deg) translate3d(0,0,390px);
+}
+
+/* Transform classes */
+
+.bk-viewinside {
+  margin-left: 47%;
+}
+
+.bk-viewinside .bk-front {
+	-webkit-transform: translate3d(0,0,20px) rotate3d(0,1,0,-160deg);
+	-moz-transform: translate3d(0,0,20px) rotate3d(0,1,0,-160deg);
+	transform: translate3d(0,0,20px) rotate3d(0,1,0,-160deg);
+}
+
+.bk-book.bk-viewinside {
+	-webkit-transform: translate3d(0,0,200px) rotate3d(0,1,0,0deg);
+	-moz-transform: translate3d(0,0,200px) rotate3d(0,1,0,0deg);
+	transform: translate3d(0,0,200px) rotate3d(0,1,0,0deg);
+}
+
+.bk-book.bk-viewback {
+	-webkit-transform: translate3d(0,0,0px) rotate3d(0,1,0,180deg);
+	-moz-transform: translate3d(0,0,0px) rotate3d(0,1,0,180deg);
+	transform: translate3d(0,0,0px) rotate3d(0,1,0,180deg);
+}
+
+.bk-viewback .bk-back {
+	z-index: 10;
+}
+
+/* Main colors and content */
+
+.bk-front:after {
+  content: '';
+  position: absolute;
+  top: 1px;
+  bottom: 1px;
+  left: -1px;
+  width: 0px;
+}
+.bk-cover:after,
+.bk-back:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 10px;
+	bottom: 0;
+	width: 3px;
+	background: rgba(0,0,0,0.06);
+}
+
+.bk-back:after {
+	left: auto;
+	right: 10px;
+}
+
+/* Individual style */
+
+.bk-book .bk-front > div,
+.bk-book .bk-back,
+.bk-book .bk-left,
+.bk-book .bk-front:after {
+	background-color: #241F20;
+}
+
+.bk-book .bk-cover{
+  display: table;
+  width:100%;
+  height:100%;
+  overflow: hidden;
+  cursor: default;
+}
+.bk-book .bk-cover .bk-title{
+  display: table-cell;
+  vertical-align:middle;
+  color: #fff;
+  text-transform: uppercase;
+}
+.bk-book .bk-cover .bk-title div{
+  display:block;
+  width: 343px;
+  margin:auto;
+}
+.bk-book .bk-cover .bk-title h1{
+  font: 800 4em "open sans";
+  line-height: 1em;
+}
+.bk-book .bk-cover .bk-title h2{
+  text-align: right;
+  font: 800 1em "open sans";
+}
+.bk-book .bk-cover .bk-title h2.before{
+  text-align: left;
+  margin-left: 3px;
+  line-height: 1em;
+}
+.highlight{
+  color: #ED5565;
+}
+
+.bk-book .bk-cover h3{
+  position: absolute;
+  bottom: 15%;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  font: 800 0.7em "open sans";
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.bk-book .bk-content p {
+	font-family: Georgia, Times, "Times New Roman", serif;
+}
+
+.bk-book .bk-left h2 {
+	color: #fff;
+	font-size: 15px;
+	line-height: 40px;
+	padding-right: 10px;
+	text-align: right;
+}
+
+.bk-book .bk-back{
+  display: table;
+  overflow: hidden;
+}
+
+.bk-book .bk-back p {
+	color: #fff;
+	font-size: 0.9em;
+	padding: 40px;
+	text-align: center;
+	font-weight: 700;
+  position: absolute;
+  width: 100%;
+}
+
+.bk-book .bk-back h1{
+  font: 800 8em "open sans";
+  text-align: center;
+  height: 100%;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/* Estilos para las imágenes */
+.bk-book .bk-page .image-square,
+.bk-book .bk-cover-back .image-square {  
+  display: table;
+  width: 50%;
+  height: 100%;
+  float: left;
+  background-size: cover; /* Ajustar la imagen al tamaño del div */
+  background-position: center; /* Centrar la imagen */
+}
+
+/* Estilos individuales para cada imagen */
+.image-1 { background-image: url('./image/imagen2.png'); }
+.image-2 { background-image: url('./image/imagen3.png'); }
+.image-3 { background-image: url('./image/imagen4.png'); }
+.image-4 { background-image: url('./image/imagen5.png'); }
+.image-5 { background-image: url('./image/imagen6.png'); }
+.image-6 { background-image: url('./image/imagen7.png'); }
+
+/* Fallbacks */
+
+.no-csstransforms3d .bk-book > div,
+.no-csstransforms3d .bk-book .bk-cover-back {
+	display: none;
+}
+
+.no-csstransforms3d .bk-book > div.bk-front {
+	display: block;
+}
+
+.no-csstransforms3d .bk-info button,
+.no-js .bk-info button {
+	display: none;
+}
+
+@media (max-width: 700px) { 
+  body{
+    font-size: 50%;
+  }
+  
+  .bk-book .bk-cover .bk-title div {
+    width: 184px;
+  }
+}
+
+@media (max-width: 430px) { 
+  body{
+    font-size: 35%;
+  }
+  
+  .bk-book .bk-cover .bk-title div {
+    width: 128px;
+  }
+}
+.bb-bookblock {
+  width: 200%;
+  height: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  z-index: 100;
+  -webkit-perspective: 1300px;
+  -moz-perspective: 1300px;
+  perspective: 1300px;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.bb-page {
+  position: absolute;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  transition-property: transform;
+}
+
+.bb-vertical .bb-page {
+  width: 50%;
+  height: 100%;
+  left: 50%;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  transform-origin: left center;
+}
+
+.bb-horizontal .bb-page {
+  width: 100%;
+  height: 50%;
+  top: 50%;
+  -webkit-transform-origin: center top;
+  -moz-transform-origin: center top;
+  transform-origin: center top;
+}
+
+.bb-page > div,
+.bb-outer,
+.bb-content,
+.bb-inner {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.bb-outer {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.bb-vertical .bb-content {
+  width: 200%;
+}
+
+.bb-horizontal .bb-content {
+  height: 200%;
+}
+
+.bb-page > div {
+  width: 100%;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.bb-page > div:not(:only-child) {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.bb-vertical .bb-back {
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+}
+
+.bb-horizontal .bb-back {
+  -webkit-transform: rotateX(-180deg);
+  -moz-transform: rotateX(-180deg);
+  transform: rotateX(-180deg);
+}
+
+.bb-outer {
+  width: 100%;
+  overflow: hidden;
+  z-index: 999;
+}
+
+.bb-overlay, 
+.bb-flipoverlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.bb-flipoverlay {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* */
+
+.bb-bookblock.bb-vertical > div.bb-page:first-child,
+.bb-bookblock.bb-vertical > div.bb-page:first-child .bb-back {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.bb-bookblock.bb-horizontal > div.bb-page:first-child,
+.bb-bookblock.bb-horizontal > div.bb-page:first-child .bb-back {
+  -webkit-transform: rotateX(180deg);
+  -moz-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+}
+
+/* Content display */
+.bb-vertical .bb-front .bb-content {
+  left: -100%;
+}
+
+.bb-horizontal .bb-front .bb-content {
+  top: -100%;
+}
+
+/* Flipping classes */
+.bb-vertical .bb-flip-next,
+.bb-vertical .bb-flip-initial {
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+}
+
+.bb-vertical .bb-flip-prev {
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+}
+
+.bb-horizontal .bb-flip-next,
+.bb-horizontal .bb-flip-initial {
+  -webkit-transform: rotateX(180deg);
+  -moz-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+}
+
+.bb-horizontal .bb-flip-prev {
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+}
+
+.bb-vertical .bb-flip-next-end {
+  -webkit-transform: rotateY(-15deg);
+  -moz-transform: rotateY(-15deg);
+  transform: rotateY(-15deg);
+}
+
+.bb-vertical .bb-flip-prev-end {
+  -webkit-transform: rotateY(-165deg);
+  -moz-transform: rotateY(-165deg);
+  transform: rotateY(-165deg);
+}
+
+.bb-horizontal .bb-flip-next-end {
+  -webkit-transform: rotateX(15deg);
+  -moz-transform: rotateX(15deg);
+  transform: rotateX(15deg);
+}
+
+.bb-horizontal .bb-flip-prev-end {
+  -webkit-transform: rotateX(165deg);
+  -moz-transform: rotateX(165deg);
+  transform: rotateX(165deg);
+}
+
+.bb-item {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+/* No JS */
+.no-js .bb-bookblock, 
+.no-js ul.bb-custom-grid li {
+  width: auto;
+  height: auto;
+}
+
+.no-js .bb-item {
+  display: block;
+  position: relative;
+}
